@@ -1,0 +1,93 @@
+---
+import '../styles/theme.css';
+
+const pageTitle = "86sunbot - Projects";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="bg-gray-900 text-cyan-400">
+    <header class="neon-border p-6">
+      <nav class="flex justify-between items-center">
+        <h1 class="text-4xl font-bold neon-text">86sunbot</h1>
+        <ul class="flex gap-6">
+          <li><a href="/" class="neon-link">Home</a></li>
+          <li><a href="/about" class="neon-link">About</a></li>
+          <li><a href="/projects" class="neon-link active">Projects</a></li>
+          <li><a href="/blog" class="neon-link">Blog</a></li>
+          <li><a href="/contact" class="neon-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+      <section>
+        <h2 class="text-5xl font-bold mb-8 neon-glow">My Projects</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div class="cyber-card p-6 hover:scale-105 transition-transform">
+            <h3 class="text-2xl font-bold mb-3 text-pink-500">Cyberpunk Portfolio</h3>
+            <p class="text-gray-300 mb-4">
+              A neon-themed portfolio built with Astro and Tailwind CSS featuring
+              cyberpunk aesthetics and smooth animations.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 text-xs bg-cyan-900 text-cyan-400 border border-cyan-500 rounded">Astro</span>
+              <span class="px-2 py-1 text-xs bg-cyan-900 text-cyan-400 border border-cyan-500 rounded">Tailwind</span>
+            </div>
+            <a href="#" class="text-pink-400 hover:text-pink-300 underline">View Project →</a>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="cyber-card p-6 hover:scale-105 transition-transform">
+            <h3 class="text-2xl font-bold mb-3 text-pink-500">AI Experiment Lab</h3>
+            <p class="text-gray-300 mb-4">
+              Exploring machine learning models and AI applications with interactive demos
+              and visualizations.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 text-xs bg-cyan-900 text-cyan-400 border border-cyan-500 rounded">Python</span>
+              <span class="px-2 py-1 text-xs bg-cyan-900 text-cyan-400 border border-cyan-500 rounded">TensorFlow</span>
+            </div>
+            <a href="#" class="text-pink-400 hover:text-pink-300 underline">View Project →</a>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="cyber-card p-6 hover:scale-105 transition-transform">
+            <h3 class="text-2xl font-bold mb-3 text-pink-500">Dev Tools Collection</h3>
+            <p class="text-gray-300 mb-4">
+              A curated collection of developer tools and utilities to boost productivity
+              and streamline workflows.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span class="px-2 py-1 text-xs bg-cyan-900 text-cyan-400 border border-cyan-500 rounded">JavaScript</span>
+              <span class="px-2 py-1 text-xs bg-cyan-900 text-cyan-400 border border-cyan-500 rounded">Node.js</span>
+            </div>
+            <a href="#" class="text-pink-400 hover:text-pink-300 underline">View Project →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="mt-12">
+        <h3 class="text-3xl font-bold mb-6 text-purple-400">Open Source Contributions</h3>
+        <div class="cyber-card p-6">
+          <p class="text-gray-300 mb-4">
+            Active contributor to various open source projects in the web development
+            and AI communities. Check out my GitHub profile for more.
+          </p>
+          <a href="https://github.com/86sunbot" class="text-pink-400 hover:text-pink-300 underline">View GitHub →</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center py-8 text-gray-500 border-t border-cyan-800">
+      <p>&copy; 2025 86sunbot. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
