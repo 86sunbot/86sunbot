@@ -1,54 +1,286 @@
 ---
-import '../styles/theme.css';
-
-const pageTitle = "86sunbot - Home";
+// pages/index.astro
+// TODO: Import components when ready (Navigation, Footer, etc.)
+// TODO: Add SEO metadata and Open Graph tags
+const pageTitle = "86sunbot | Cyberpunk Portfolio";
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>{pageTitle}</title>
-  </head>
-  <body class="bg-gray-900 text-cyan-400">
-    <header class="neon-border p-6">
-      <nav class="flex justify-between items-center">
-        <h1 class="text-4xl font-bold neon-text">86sunbot</h1>
-        <ul class="flex gap-6">
-          <li><a href="/" class="neon-link">Home</a></li>
-          <li><a href="/about" class="neon-link">About</a></li>
-          <li><a href="/projects" class="neon-link">Projects</a></li>
-          <li><a href="/blog" class="neon-link">Blog</a></li>
-          <li><a href="/contact" class="neon-link">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{pageTitle}</title>
+  <!-- TODO: Add favicon link here -->
+  <!-- TODO: Add Open Graph meta tags for social sharing -->
+</head>
+<body>
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <!-- TODO: Replace with actual SVG logo/banner when available -->
+      <div class="hero-banner">
+        <h1 class="glitch" data-text="86SUNBOT">86SUNBOT</h1>
+      </div>
+      
+      <p class="tagline">
+        <span class="neon-text">Cyberpunk Developer</span> // Building the Future
+      </p>
+      
+      <div class="cta-group">
+        <a href="#projects" class="cta-button primary">View Projects</a>
+        <a href="#contact" class="cta-button secondary">Get in Touch</a>
+      </div>
+      
+      <!-- TODO: Add animated background SVG elements -->
+      <div class="background-grid"></div>
+    </div>
+  </section>
 
-    <main class="container mx-auto px-6 py-12">
-      <section class="hero text-center py-20">
-        <h2 class="text-6xl font-bold mb-4 neon-glow">Welcome to the Cyberpunk Zone</h2>
-        <p class="text-xl text-purple-400">Where code meets neon aesthetics</p>
-      </section>
+  <!-- TODO: Add Projects Section -->
+  <!-- TODO: Add About Section -->
+  <!-- TODO: Add Contact Section -->
+  <!-- TODO: Add Footer Component -->
 
-      <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-        <div class="cyber-card p-6">
-          <h3 class="text-2xl font-bold mb-2 text-pink-500">Projects</h3>
-          <p class="text-gray-300">Explore my latest cyberpunk-inspired projects</p>
-        </div>
-        <div class="cyber-card p-6">
-          <h3 class="text-2xl font-bold mb-2 text-pink-500">Blog</h3>
-          <p class="text-gray-300">Read about tech, AI, and digital culture</p>
-        </div>
-        <div class="cyber-card p-6">
-          <h3 class="text-2xl font-bold mb-2 text-pink-500">Contact</h3>
-          <p class="text-gray-300">Let's connect in the digital realm</p>
-        </div>
-      </section>
-    </main>
+  <style>
+    /* Cyberpunk/Neon Theme Styling */
+    :root {
+      --neon-cyan: #00fff9;
+      --neon-magenta: #ff00ff;
+      --neon-yellow: #ffff00;
+      --dark-bg: #0a0a0f;
+      --dark-surface: #1a1a2e;
+      --text-primary: #ffffff;
+      --text-secondary: #b8b8d1;
+    }
 
-    <footer class="text-center py-8 text-gray-500 border-t border-cyan-800">
-      <p>&copy; 2025 86sunbot. All rights reserved.</p>
-    </footer>
-  </body>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: var(--dark-bg);
+      color: var(--text-primary);
+      font-family: 'Courier New', monospace;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(135deg, var(--dark-bg) 0%, var(--dark-surface) 100%);
+    }
+
+    .hero-container {
+      text-align: center;
+      z-index: 10;
+      padding: 2rem;
+    }
+
+    /* TODO: Replace with actual SVG banner styling */
+    .hero-banner {
+      margin-bottom: 2rem;
+    }
+
+    .hero-banner h1 {
+      font-size: clamp(3rem, 10vw, 8rem);
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      color: var(--neon-cyan);
+      text-shadow: 
+        0 0 10px var(--neon-cyan),
+        0 0 20px var(--neon-cyan),
+        0 0 40px var(--neon-cyan),
+        0 0 80px var(--neon-cyan);
+      animation: flicker 2s infinite alternate;
+    }
+
+    /* Glitch Effect - TODO: Enhance with more complex animation */
+    .glitch {
+      position: relative;
+    }
+
+    .glitch::before,
+    .glitch::after {
+      content: attr(data-text);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .glitch::before {
+      color: var(--neon-magenta);
+      animation: glitch-1 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse infinite;
+      clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+    }
+
+    .glitch::after {
+      color: var(--neon-yellow);
+      animation: glitch-2 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+      clip-path: polygon(0 55%, 100% 55%, 100% 100%, 0 100%);
+    }
+
+    /* Tagline */
+    .tagline {
+      font-size: clamp(1rem, 3vw, 1.5rem);
+      color: var(--text-secondary);
+      margin-bottom: 3rem;
+      letter-spacing: 0.05em;
+    }
+
+    .neon-text {
+      color: var(--neon-magenta);
+      text-shadow: 0 0 5px var(--neon-magenta);
+    }
+
+    /* CTA Buttons */
+    .cta-group {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .cta-button {
+      padding: 1rem 2.5rem;
+      font-size: 1.1rem;
+      font-family: 'Courier New', monospace;
+      text-decoration: none;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border: 2px solid;
+      position: relative;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .cta-button.primary {
+      color: var(--dark-bg);
+      background: var(--neon-cyan);
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 20px var(--neon-cyan);
+    }
+
+    .cta-button.primary:hover {
+      background: transparent;
+      color: var(--neon-cyan);
+      box-shadow: 0 0 30px var(--neon-cyan);
+    }
+
+    .cta-button.secondary {
+      color: var(--neon-magenta);
+      background: transparent;
+      border-color: var(--neon-magenta);
+      box-shadow: 0 0 10px var(--neon-magenta);
+    }
+
+    .cta-button.secondary:hover {
+      background: var(--neon-magenta);
+      color: var(--dark-bg);
+      box-shadow: 0 0 30px var(--neon-magenta);
+    }
+
+    /* Background Grid - TODO: Replace with SVG pattern */
+    .background-grid {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+        linear-gradient(rgba(0, 255, 249, 0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 255, 249, 0.1) 1px, transparent 1px);
+      background-size: 50px 50px;
+      opacity: 0.3;
+      z-index: 1;
+    }
+
+    /* Animations */
+    @keyframes flicker {
+      0%, 18%, 22%, 25%, 53%, 57%, 100% {
+        text-shadow: 
+          0 0 10px var(--neon-cyan),
+          0 0 20px var(--neon-cyan),
+          0 0 40px var(--neon-cyan),
+          0 0 80px var(--neon-cyan);
+      }
+      20%, 24%, 55% {
+        text-shadow: none;
+      }
+    }
+
+    @keyframes glitch-1 {
+      0% {
+        transform: translate(0);
+      }
+      20% {
+        transform: translate(-2px, 2px);
+      }
+      40% {
+        transform: translate(-2px, -2px);
+      }
+      60% {
+        transform: translate(2px, 2px);
+      }
+      80% {
+        transform: translate(2px, -2px);
+      }
+      100% {
+        transform: translate(0);
+      }
+    }
+
+    @keyframes glitch-2 {
+      0% {
+        transform: translate(0);
+      }
+      20% {
+        transform: translate(2px, -2px);
+      }
+      40% {
+        transform: translate(2px, 2px);
+      }
+      60% {
+        transform: translate(-2px, -2px);
+      }
+      80% {
+        transform: translate(-2px, 2px);
+      }
+      100% {
+        transform: translate(0);
+      }
+    }
+
+    /* Responsive adjustments - TODO: Test on various devices */
+    @media (max-width: 768px) {
+      .cta-group {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .cta-button {
+        width: 100%;
+        max-width: 300px;
+      }
+    }
+
+    /* TODO: Add scan line animation overlay */
+    /* TODO: Add particle effect system */
+    /* TODO: Implement color theme customization */
+    /* TODO: Add smooth scroll behavior for anchor links */
+  </style>
+
+  <!-- TODO: Add JavaScript for interactive elements -->
+  <!-- TODO: Implement smooth scrolling -->
+  <!-- TODO: Add intersection observer for animations on scroll -->
+</body>
 </html>
