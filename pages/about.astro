@@ -1,0 +1,73 @@
+---
+import '../styles/theme.css';
+
+const pageTitle = "86sunbot - About";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="bg-gray-900 text-cyan-400">
+    <header class="neon-border p-6">
+      <nav class="flex justify-between items-center">
+        <h1 class="text-4xl font-bold neon-text">86sunbot</h1>
+        <ul class="flex gap-6">
+          <li><a href="/" class="neon-link">Home</a></li>
+          <li><a href="/about" class="neon-link active">About</a></li>
+          <li><a href="/projects" class="neon-link">Projects</a></li>
+          <li><a href="/blog" class="neon-link">Blog</a></li>
+          <li><a href="/contact" class="neon-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+      <section class="max-w-4xl mx-auto">
+        <h2 class="text-5xl font-bold mb-8 neon-glow">About Me</h2>
+        
+        <div class="cyber-card p-8 mb-8">
+          <h3 class="text-3xl font-bold mb-4 text-pink-500">Who I Am</h3>
+          <p class="text-lg text-gray-300 leading-relaxed mb-4">
+            I'm a developer, creator, and digital explorer navigating the intersection of technology and creativity.
+            Welcome to my corner of the cyber realm.
+          </p>
+          <p class="text-lg text-gray-300 leading-relaxed">
+            My work spans across web development, AI exploration, and building tools that make the digital world
+            more interesting and accessible.
+          </p>
+        </div>
+
+        <div class="cyber-card p-8 mb-8">
+          <h3 class="text-3xl font-bold mb-4 text-pink-500">What I Do</h3>
+          <ul class="list-disc list-inside text-lg text-gray-300 space-y-2">
+            <li>Full-stack web development with modern frameworks</li>
+            <li>Building cyberpunk-themed interfaces and experiences</li>
+            <li>Exploring AI and machine learning applications</li>
+            <li>Creating content about technology and digital culture</li>
+            <li>Open source contributions and community projects</li>
+          </ul>
+        </div>
+
+        <div class="cyber-card p-8">
+          <h3 class="text-3xl font-bold mb-4 text-pink-500">Tech Stack</h3>
+          <div class="flex flex-wrap gap-3">
+            <span class="px-4 py-2 bg-cyan-900 text-cyan-400 border border-cyan-500 rounded">Astro</span>
+            <span class="px-4 py-2 bg-cyan-900 text-cyan-400 border border-cyan-500 rounded">Tailwind CSS</span>
+            <span class="px-4 py-2 bg-cyan-900 text-cyan-400 border border-cyan-500 rounded">JavaScript</span>
+            <span class="px-4 py-2 bg-cyan-900 text-cyan-400 border border-cyan-500 rounded">TypeScript</span>
+            <span class="px-4 py-2 bg-cyan-900 text-cyan-400 border border-cyan-500 rounded">React</span>
+            <span class="px-4 py-2 bg-cyan-900 text-cyan-400 border border-cyan-500 rounded">Node.js</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center py-8 text-gray-500 border-t border-cyan-800">
+      <p>&copy; 2025 86sunbot. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
