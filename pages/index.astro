@@ -1,0 +1,54 @@
+---
+import '../styles/theme.css';
+
+const pageTitle = "86sunbot - Home";
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{pageTitle}</title>
+  </head>
+  <body class="bg-gray-900 text-cyan-400">
+    <header class="neon-border p-6">
+      <nav class="flex justify-between items-center">
+        <h1 class="text-4xl font-bold neon-text">86sunbot</h1>
+        <ul class="flex gap-6">
+          <li><a href="/" class="neon-link">Home</a></li>
+          <li><a href="/about" class="neon-link">About</a></li>
+          <li><a href="/projects" class="neon-link">Projects</a></li>
+          <li><a href="/blog" class="neon-link">Blog</a></li>
+          <li><a href="/contact" class="neon-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-12">
+      <section class="hero text-center py-20">
+        <h2 class="text-6xl font-bold mb-4 neon-glow">Welcome to the Cyberpunk Zone</h2>
+        <p class="text-xl text-purple-400">Where code meets neon aesthetics</p>
+      </section>
+
+      <section class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
+        <div class="cyber-card p-6">
+          <h3 class="text-2xl font-bold mb-2 text-pink-500">Projects</h3>
+          <p class="text-gray-300">Explore my latest cyberpunk-inspired projects</p>
+        </div>
+        <div class="cyber-card p-6">
+          <h3 class="text-2xl font-bold mb-2 text-pink-500">Blog</h3>
+          <p class="text-gray-300">Read about tech, AI, and digital culture</p>
+        </div>
+        <div class="cyber-card p-6">
+          <h3 class="text-2xl font-bold mb-2 text-pink-500">Contact</h3>
+          <p class="text-gray-300">Let's connect in the digital realm</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center py-8 text-gray-500 border-t border-cyan-800">
+      <p>&copy; 2025 86sunbot. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
