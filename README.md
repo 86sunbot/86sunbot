@@ -70,7 +70,27 @@ flowchart LR
 └─────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-#### 🛡️ [Sentinel-Log-Validation-Agent](https://github.com/86sunbot/Sentinel-Log-Validation-Agent)
+#### 🌐 [FDE-Final-Capstone](https://github.com/86sunbot/FDE-Final-Capstone) · `[PUBLIC · OPEN SOURCE]`
+> **21-Stage AI FDE Operating Model: Cell & Gene Therapy (CGT) Orchestration**  
+> *Stack: Python · SQLite · Bitemporal Ledgers · Deterministic State Machines*
+- Replaced a fragmented fail-open legacy environment with a **deterministic fail-closed orchestration layer** and bounded AI exception triage.
+- Implements all 21 stages of the AI Forward Deployed Engineering operating model: bitemporal event sourcing, GxP boundary isolation, and immutable audit trails.
+
+#### 🌐 [caldera-monitoring-triage](https://github.com/86sunbot/caldera-monitoring-triage) · `[PUBLIC · LIVE APPLET]`
+> **GxP-Auditable Clinical Monitoring Report Triage Engine**  
+> *Stack: TypeScript · Python · Google AI Studio Applet · Vite*
+- **Verbatim Attribution Gate**: Surfaces operational observations with immutable `document_id`, `page_number`, and `verbatim_sentence` attribution.
+- **Curveball Resilience**: Handles partial upstream outages with statutory completeness warnings and strict denominator disclosures (`reports_retrieved` / `reports_expected`).
+- **Live Interactive Deployment**: Integrated with Google AI Studio applet.
+
+#### 🌐 [fde-lab](https://github.com/86sunbot/fde-lab) · `[PUBLIC · RESEARCH LAB]`
+> **Forward Deployed Engineering Lab: Case Studies, Prototypes & Analysis**  
+> *Stack: Python · AI Engineering · Cloud Architecture*
+- Hands-on prototypes, incremental forward-deployed engineering architectures, and technical trade-off guides (e.g., Microsoft Defender for Identity vs. CrowdStrike AI detection).
+
+---
+
+#### 🛡️ Sentinel-Log-Validation-Agent · `[ENTERPRISE IP · CONFIDENTIAL]`
 > **Deterministic Log Onboarding Assurance Platform & AI SOC Co-Pilot**  
 > *Stack: Python 3.11+ · KQL · FastAPI · Microsoft Sentinel · ASIM*
 - **130+ Deterministic Unit Tests**: Evaluates log onboarding health, latency percentiles ($P_{95}$), and field population without probabilistic LLM guessing.
@@ -79,29 +99,17 @@ flowchart LR
 - **FinOps Sizing & ASIM Scoring**: Models Analytics vs. Basic Logs cost optimization and scores telemetry against Sentinel ASIM schemas.
 - **Interactive SOC Workbench**: Local FastAPI assurance dashboard with real-time hop-by-hop pipeline visibility and SHA-256 tamper-evident audit packages.
 
-#### 🧬 [FDE-Final-Capstone](https://github.com/86sunbot/FDE-Final-Capstone) / [AI-FDE-Capstone-AG](https://github.com/86sunbot/AI-FDE-Capstone-AG)
-> **21-Stage AI FDE Operating Model: Cell & Gene Therapy (CGT) Orchestration**  
-> *Stack: Python · SQLite · Bitemporal Ledgers · Deterministic State Machines*
-- Replaced a fragmented fail-open legacy environment with a **deterministic fail-closed orchestration layer** and bounded AI exception triage.
-- Implements all 21 stages of the AI Forward Deployed Engineering operating model: bitemporal event sourcing, GxP boundary isolation, and immutable audit trails.
-
-#### 🏥 [caldera-monitoring-triage](https://github.com/86sunbot/caldera-monitoring-triage)
-> **GxP-Auditable Clinical Monitoring Report Triage Engine**  
-> *Stack: TypeScript · Python · Google AI Studio Applet · Vite*
-- **Verbatim Attribution Gate**: Surfaces operational observations with immutable `document_id`, `page_number`, and `verbatim_sentence` attribution.
-- **Curveball Resilience**: Handles partial upstream outages with statutory completeness warnings and strict denominator disclosures (`reports_retrieved` / `reports_expected`).
-
-#### 🔍 [sentinel-detection-engineering](https://github.com/86sunbot/sentinel-detection-engineering)
+#### 🔍 sentinel-detection-engineering · `[PROPRIETARY KQL SUITE · PRIVATE]`
 > **Production-Grade KQL Detection Rules Mapped to MITRE ATT&CK**  
 > *Stack: KQL · Microsoft Sentinel · MITRE ATT&CK Enterprise*
-- Coverage for Identity Attacks (credential dumping, anomalous Entra ID sign-ins), Lateral Movement, and Cloud Persistence mechanisms.
+- High-fidelity rules for Identity Attacks (credential dumping, anomalous Entra ID sign-ins), Lateral Movement, and Cloud Persistence mechanisms.
 
-#### 🤖 [ai-security-lab](https://github.com/86sunbot/ai-security-lab)
+#### 🤖 ai-security-lab · `[INTERNAL ADVERSARIAL RESEARCH · PRIVATE]`
 > **LLM Threat Models, Adversarial Red Teaming & Invariant Guardrails**  
 > *Stack: Python · OWASP Top 10 for LLMs · Prompt Injection Defense*
 - Research on indirect prompt injection vectors, context escaping techniques, and hardening Azure OpenAI endpoints.
 
-#### 🏗️ [azure-security-framework](https://github.com/86sunbot/azure-security-framework)
+#### 🏗️ azure-security-framework · `[ARCHITECTURE BASELINE · PRIVATE]`
 > **Cloud Security Architecture & Zero Trust Landing Zones**  
 > *Stack: Terraform · Bicep · Azure Policy · MCSB*
 - Reference designs aligned with the Microsoft Cloud Security Benchmark (MCSB) and Cloud Adoption Framework (CAF).
