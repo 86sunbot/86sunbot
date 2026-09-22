@@ -1,142 +1,74 @@
-# Surya · Cybersecurity Architect & AI Systems Nerd 🛡️🤖
+# Surya
 
-```text
-===================================================================================================
-[SYSTEM_TELEMETRY]: ONLINE  |  [CREDENTIALS]: CISSP · ISC²  |  [PARADIGM]: FAIL-CLOSED DETERMINISTIC
-[CORE_VECTORS]   : Microsoft Sentinel · KQL · LLM Red Teaming · Zero Trust · FDE-21 Operating Model
-===================================================================================================
-```
-
-> *"If an AI security control relies on an LLM not hallucinating without an invariant verification gate, it is not a defense — it is an unauthenticated vulnerability."*  
-> **Philosophy: Deterministic verification > Stochastic optimism.**
+**Cybersecurity Architect · AI Systems & Detection Engineering**  
+*CISSP · Microsoft Sentinel & Azure Cloud · Forward Deployed Engineering*
 
 ---
 
-### 🔬 The Intersection: Security Architecture × AI Engineering
+> *"The most vulnerable point in modern software is where probabilistic AI meets mission-critical invariants. I design the architectures and deterministic guardrails that make those systems hold."*
 
-I operate at the convergence of **enterprise cloud security architecture** and **deterministic AI systems engineering**. My work bridges formal security frameworks (CISSP, Zero Trust, NIST CSF, Microsoft Cloud Security Benchmark) with hands-on systems programming — designing high-fidelity KQL detection engines, LLM threat boundaries, and fail-closed state machines.
+---
+
+### Overview
+
+I am a Cybersecurity Architect working at the intersection of **enterprise cloud security** and **deterministic AI engineering**. 
+
+My focus is on systems where failure is not an option: safety-critical workflows, enterprise SIEM deployments, and AI integrations in regulated domains. Rather than relying on optimistic assumptions or unverified model outputs, I build architectures anchored in **first principles**: fail-closed state machines, verifiable audit trails, high-fidelity detection engineering, and Zero Trust boundaries.
 
 ```mermaid
 flowchart LR
-    subgraph Ingestion["1. Telemetry & Ingress"]
-        direction TB
-        Logs["Security Event Telemetry\n(Syslog / AMA / Entra ID)"]
-        Prompts["AI Ingress & Unstructured Data\n(Prompts / RAG / Documents)"]
-    end
-
-    subgraph Defense["2. Deterministic Defense & Invariants"]
-        direction TB
-        ASIM["ASIM Schema Normalization\n(KQL Parsers & DCR Transforms)"]
-        Gates["Fail-Closed Invariant Safety Gates\n(P_hallucination = 0)"]
-        Canary["Synthetic Canary Resolution\n(Absence of Evidence != Failure)"]
-    end
-
-    subgraph Assurance["3. Assured Systems & Operations"]
-        direction TB
-        SOC["Bounded AI SOC Co-Pilot\n(Triage & Remediation KQL)"]
-        Audit["Tamper-Evident Audit Packages\n(SHA-256 Sealed Digests)"]
-    end
-
-    Logs --> ASIM --> Gates
-    Prompts --> Gates
-    Gates --> Canary
-    Canary --> SOC
-    Canary --> Audit
+    A["Raw Enterprise Ingress\n(Telemetry, Logs, Unstructured Data)"] --> B["Deterministic Assurance Layer\n(Schema Normalization, Invariant Gates, State Machines)"]
+    B --> C["Trusted Operations\n(High-Fidelity SIEM, Bitemporal Audit, Bounded AI)"]
 ```
 
 ---
 
-### 🛡️ Threat Modeling & Technical Weaponry
+### Core Areas of Focus
 
-<div align="center">
+* **Cloud Security Architecture & Zero Trust**  
+  Designing resilient Azure landing zones, identity perimeters (Entra ID, PIM, Conditional Access), and governance baselines aligned with the Microsoft Cloud Security Benchmark and CISSP domains.
 
-| Domain | Tactical Focus & Defense Patterns | Stack & Standards |
-| :--- | :--- | :--- |
-| **Cloud & SIEM Architecture** | Multi-hop telemetry assurance, ASIM parsers, high-throughput log economics (FinOps), Zero Trust landing zones | `Microsoft Sentinel` `KQL` `Defender for Cloud` `Entra ID` `Azure Policy` |
-| **Detection Engineering** | Threat hunting, adversary emulation detection, KQL ASTs, lateral movement & identity compromise rules | `MITRE ATT&CK` `KQL Analytics` `Sigma` `Sysmon` `XPath` |
-| **AI / LLM Threat Defense** | Prompt injection defense, system prompt extraction resistance, tool-call taint analysis, RAG poisoning mitigation | `OWASP LLM Top 10` `Guardrails` `FastAPI` `Python` `LangChain` |
-| **Safety-Critical Systems** | Bitemporal ledgers, fail-closed state machines, GxP auditable workflows, 21-state FDE delivery | `FDE-21` `Deterministic State Machines` `SHA-256 Digest Verification` |
-| **Security Automation (SOAR)** | Event-driven incident remediation, automated identity quarantine, dynamic canary dispatching | `Logic Apps` `PowerShell 7` `Python 3.12` `Terraform` `Bicep` |
+* **Detection Engineering & Security Analytics**  
+  Building high-signal, low-noise detection suites in Microsoft Sentinel using KQL ASTs and ASIM schemas, mapped directly to MITRE ATT&CK tactics (identity compromise, lateral movement, persistence).
 
-</div>
+* **AI Systems Assurance & Forward Deployed Engineering**  
+  Applying structured FDE operating models to bridge complex enterprise datasets with AI. Eliminating hallucination risk through invariant verification gates, bitemporal history, and cryptographic audit packages.
 
 ---
 
-### 🧪 Flagship War Rooms & Systems
+### Selected Case Studies & Systems
 
-```
-┌─────────────────────────────────────────────────────────────────────────────────────────────────┐
-│ FEATURED ARCHITECTURES & REPOSITORIES                                                          │
-└─────────────────────────────────────────────────────────────────────────────────────────────────┘
-```
+#### 🌐 [Cell & Gene Therapy (CGT) Orchestration](https://github.com/86sunbot/FDE-Final-Capstone)
+*Public Capstone · 21-Stage AI FDE Operating Model*
+* Replaced an inherited, fail-open legacy environment with a **deterministic, fail-closed orchestration engine** for patient-to-batch tracking.
+* Implemented bitemporal state reconciliation, explicit three-state verification (`satisfied` / `not-satisfied` / `unknown`), and immutable audit trails across seven organizational personas.
 
-#### 🌐 [FDE-Final-Capstone](https://github.com/86sunbot/FDE-Final-Capstone) · `[PUBLIC · OPEN SOURCE]`
-> **21-Stage AI FDE Operating Model: Cell & Gene Therapy (CGT) Orchestration**  
-> *Stack: Python · SQLite · Bitemporal Ledgers · Deterministic State Machines*
-- Replaced a fragmented fail-open legacy environment with a **deterministic fail-closed orchestration layer** and bounded AI exception triage.
-- Implements all 21 stages of the AI Forward Deployed Engineering operating model: bitemporal event sourcing, GxP boundary isolation, and immutable audit trails.
+#### 🌐 [Clinical Monitoring Report Triage](https://github.com/86sunbot/caldera-monitoring-triage)
+*Public System · GxP-Compliant Triage Engine · Live Interactive Applet*
+* Designed an operational review pipeline for clinical monitoring reports with **zero-hallucination guarantees** via verbatim, sentence-level source attribution (`document_id`, `page_number`, `verbatim_sentence`).
+* Engineered denominator-aware degradation gates to maintain regulatory compliance even during partial upstream service outages.
 
-#### 🌐 [caldera-monitoring-triage](https://github.com/86sunbot/caldera-monitoring-triage) · `[PUBLIC · LIVE APPLET]`
-> **GxP-Auditable Clinical Monitoring Report Triage Engine**  
-> *Stack: TypeScript · Python · Google AI Studio Applet · Vite*
-- **Verbatim Attribution Gate**: Surfaces operational observations with immutable `document_id`, `page_number`, and `verbatim_sentence` attribution.
-- **Curveball Resilience**: Handles partial upstream outages with statutory completeness warnings and strict denominator disclosures (`reports_retrieved` / `reports_expected`).
-- **Live Interactive Deployment**: Integrated with Google AI Studio applet.
-
-#### 🌐 [fde-lab](https://github.com/86sunbot/fde-lab) · `[PUBLIC · RESEARCH LAB]`
-> **Forward Deployed Engineering Lab: Case Studies, Prototypes & Analysis**  
-> *Stack: Python · AI Engineering · Cloud Architecture*
-- Hands-on prototypes, incremental forward-deployed engineering architectures, and technical trade-off guides (e.g., Microsoft Defender for Identity vs. CrowdStrike AI detection).
+#### 🌐 [Forward Deployed Engineering Lab](https://github.com/86sunbot/fde-lab)
+*Public Research & Benchmark Repository*
+* Published an in-depth comparative benchmark: *[Enterprise AI/DR: Microsoft Security vs. CrowdStrike Falcon](https://github.com/86sunbot/fde-lab/blob/main/microsoft_vs_crowdstrike_ai_dr_guide.md)*, evaluating signal fidelity, data lake economics, and AI triage efficacy.
+* Includes automated deployment pipelines and testing harnesses for Sentinel analytics use cases.
 
 ---
 
-#### 🛡️ Sentinel-Log-Validation-Agent · `[ENTERPRISE IP · CONFIDENTIAL]`
-> **Deterministic Log Onboarding Assurance Platform & AI SOC Co-Pilot**  
-> *Stack: Python 3.11+ · KQL · FastAPI · Microsoft Sentinel · ASIM*
-- **130+ Deterministic Unit Tests**: Evaluates log onboarding health, latency percentiles ($P_{95}$), and field population without probabilistic LLM guessing.
-- **Canary Resolution**: Solves *"Absence of evidence $\neq$ evidence of failure"* using synthetic correlation canary tokens for quiet event streams.
-- **Three-Way Reconciliation**: Automatically audits Enterprise Asset Inventories vs. Azure Control Plane vs. active Data Plane telemetry to catch silent attrition and shadow devices.
-- **FinOps Sizing & ASIM Scoring**: Models Analytics vs. Basic Logs cost optimization and scores telemetry against Sentinel ASIM schemas.
-- **Interactive SOC Workbench**: Local FastAPI assurance dashboard with real-time hop-by-hop pipeline visibility and SHA-256 tamper-evident audit packages.
+### Enterprise & Proprietary Architecture
 
-#### 🔍 sentinel-detection-engineering · `[PROPRIETARY KQL SUITE · PRIVATE]`
-> **Production-Grade KQL Detection Rules Mapped to MITRE ATT&CK**  
-> *Stack: KQL · Microsoft Sentinel · MITRE ATT&CK Enterprise*
-- High-fidelity rules for Identity Attacks (credential dumping, anomalous Entra ID sign-ins), Lateral Movement, and Cloud Persistence mechanisms.
-
-#### 🤖 ai-security-lab · `[INTERNAL ADVERSARIAL RESEARCH · PRIVATE]`
-> **LLM Threat Models, Adversarial Red Teaming & Invariant Guardrails**  
-> *Stack: Python · OWASP Top 10 for LLMs · Prompt Injection Defense*
-- Research on indirect prompt injection vectors, context escaping techniques, and hardening Azure OpenAI endpoints.
-
-#### 🏗️ azure-security-framework · `[ARCHITECTURE BASELINE · PRIVATE]`
-> **Cloud Security Architecture & Zero Trust Landing Zones**  
-> *Stack: Terraform · Bicep · Azure Policy · MCSB*
-- Reference designs aligned with the Microsoft Cloud Security Benchmark (MCSB) and Cloud Adoption Framework (CAF).
+In addition to open-source contributions, my enterprise work includes:
+* **Log Ingestion & Assurance Platforms**: Automated validation engines testing multi-hop telemetry health, ASIM compliance, and synthetic canary tokens in Microsoft Sentinel.
+* **FinOps Log Sizing Engines**: Ingestion tier optimization models balancing Analytics vs. Basic log economics.
+* **Adversarial AI Defense**: Threat modeling for LLMs, prompt injection boundary defenses, and secure Azure OpenAI landing zones.
 
 ---
 
-### ⚡ Technical Spec & Toolbox
+### Connect & Credentials
 
-```text
-SIEM & SOC        : Microsoft Sentinel, Log Analytics, Azure Monitor, KQL, ASIM, Defender XDR
-IDENTITY & ACCESS : Entra ID, Conditional Access, PIM, Zero Trust, RBAC, OAuth2 / OIDC
-AI & ADVERSARIAL  : OWASP Top 10 for LLM, AI Red Teaming, Prompt Defense, LangChain, FastAPI
-SYSTEMS & IAAC    : Python 3.12, PowerShell, TypeScript, Terraform, Bicep, GitHub Actions, Docker
-ASSURANCE & GOV   : CISSP (ISC²), NIST CSF 2.0, ISO 27001, MITRE ATT&CK, GxP / Bitemporal Audit
-```
+* **Credentials**: CISSP (ISC²) · Microsoft Security Operations & Azure Cloud
+* **LinkedIn**: [linkedin.com/in/surya-ps-cissp-a5a097160](https://www.linkedin.com/in/surya-ps-cissp-a5a097160/)
+* **GitHub**: [@86sunbot](https://github.com/86sunbot)
 
 ---
-
-### 📊 Cryptographic Identity & Network
-
-<p align="left">
-  <a href="https://www.linkedin.com/in/surya-ps-cissp-a5a097160/"><img src="https://img.shields.io/badge/LinkedIn-Surya%20PS%20(CISSP)-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" /></a>
-  <a href="https://github.com/86sunbot"><img src="https://img.shields.io/badge/GitHub-86sunbot-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
-  <img src="https://img.shields.io/badge/Security%20Clearance-CISSP%20Certified-4CAF50?style=for-the-badge" alt="CISSP Certified" />
-  <img src="https://img.shields.io/badge/Security%20Posture-Fail--Closed%20%7C%20Zero--Trust-blueviolet?style=for-the-badge" alt="Fail Closed" />
-</p>
-
-```text
-[EOF] ─── "Security is not a product. It is an architecture, a proof system, and a discipline."
-```
+*“Security is not a product. It is an architecture, a proof system, and a discipline.”*
