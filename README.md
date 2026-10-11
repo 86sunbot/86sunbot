@@ -7,22 +7,22 @@ I design Azure and hybrid security architectures, engineer Microsoft Sentinel de
 ## Featured Examples
 
 ### 1. Microsoft Sentinel Detection Engineering & Log Assurance
-- **Problem:** SIEM teams face silent log drop-offs, unassociated Data Collection Rules (DCRs), and error-prone translation of threat requirements into KQL rules.
+- **Problem:** SIEM teams face silent log drop-offs, unassociated Data Collection Rules (DCRs), and error-prone KQL translation.
 - **Contribution:** Built the **AI-Assisted Sentinel Detection Engineering Agent (V3.4)** and **Sentinel Log Validation Agent** to ground candidate KQL against workspace schemas, reconcile assets against DCRs and heartbeats, verify pipelines with synthetic canaries, and enforce human-gated `enabled=false` deployment.
-- **Result:** Runnable CLI/FastAPI validation workbenches and MITRE ATT&CK v14 KQL rules for MFA fatigue (`T1621`), impossible travel (`T1078`), pass-the-hash (`T1550.002`), and privileged role assignment (`T1098.003`).
-- **Evidence:** [Sentinel Detections & Assurance](https://github.com/86sunbot/portfolio/blob/main/sentinel.md) · [AI Detection Agent V3.4](https://github.com/86sunbot/portfolio/blob/main/ai-agents.md#1-ai-assisted-microsoft-sentinel-detection-engineering-agent-ai-agent-usecase-deployment-v34)
+- **Result:** Six MITRE ATT&CK v14 KQL rules (`T1621`, `T1078`, `T1550.002`, `T1098.003`, `T1530`, `T1071.004`), three-way log reconciliation, and five-stage KQL validation.
+- **Access & Evidence:** **Public case study with implementation currently private** ([Sentinel](https://github.com/86sunbot/portfolio/blob/main/sentinel.md) · [Detection Agent V3.4](https://github.com/86sunbot/portfolio/blob/main/ai-agents.md#1-ai-assisted-microsoft-sentinel-detection-engineering-agent-ai-agent-usecase-deployment-v34)); V1 prototype has **public source and demo instructions** ([`fde-lab/sentinel-usecase-deployment`](https://github.com/86sunbot/fde-lab/tree/main/sentinel-usecase-deployment)).
 
 ### 2. Cell & Gene Therapy (CGT) Patient-to-Batch Orchestration
 - **Problem:** A brownfield orchestration baseline had fail-open exceptions, single-timestamp overwrites on out-of-order lab events, and unauthenticated role elevation.
-- **Contribution:** Engineered a Python orchestration engine (`src/fde_capstone/`), FastAPI service, and browser console with three-state gate evaluation (`satisfied` / `not-satisfied` / `unknown`), bitemporal history, opaque bearer-token mutation auth mapped to server-side RBAC roles/scopes, and a SHA-256 hash-chained SQLite audit log.
+- **Contribution:** Engineered a Python orchestration engine (`src/fde_capstone/`), FastAPI service, and browser console with three-state gates (`satisfied` / `not-satisfied` / `unknown`), bitemporal history, opaque bearer-token mutation auth mapped to server-side RBAC roles/scopes, and a SHA-256 hash-chained SQLite audit log.
 - **Result:** Runnable Control Tower demo (`START_DEMO.command`) with three synthetic POCs, disruption previews, and seven read-only persona lenses.
-- **Evidence:** [Public Repository & Runnable Demo (`FDE-Final-Capstone`)](https://github.com/86sunbot/FDE-Final-Capstone)
+- **Access & Evidence:** **Public source and demo instructions** ([`FDE-Final-Capstone`](https://github.com/86sunbot/FDE-Final-Capstone)).
 
-### 3. Azure Zero Trust Architecture & Enterprise AI/DR Benchmark
+### 3. Azure Zero Trust Architecture & Enterprise AI/DR Architecture Comparison
 - **Problem:** Cloud architects need implementation-level designs connecting Entra ID Conditional Access, Hub-Spoke segmentation, Private Link DNS, encryption hierarchies, and SIEM/XDR trade-offs.
-- **Contribution:** Authored the **Azure Security Architecture Framework** and the **Microsoft Security vs. CrowdStrike Falcon Enterprise AI/DR Benchmark**.
+- **Contribution:** Prepared the **Azure Security Architecture Framework** and the **Microsoft Security vs. CrowdStrike Falcon Enterprise AI/DR Architecture Comparison**.
 - **Result:** Conditional Access matrices, Hub-Spoke/Private Link topologies, PMK/CMK/CPK patterns, HLD/ADR templates, and comparative SIEM/XDR guidance.
-- **Evidence:** [Security Architecture](https://github.com/86sunbot/portfolio/blob/main/security-architecture.md) · [Public AI/DR Benchmark](https://github.com/86sunbot/fde-lab/blob/main/microsoft_vs_crowdstrike_ai_dr_guide.md)
+- **Access & Evidence:** **Public source** ([AI/DR Architecture Comparison](https://github.com/86sunbot/fde-lab/blob/main/microsoft_vs_crowdstrike_ai_dr_guide.md)); **public case study with implementation currently private** ([Security Architecture](https://github.com/86sunbot/portfolio/blob/main/security-architecture.md)).
 
 ---
 
@@ -38,9 +38,9 @@ I design Azure and hybrid security architectures, engineer Microsoft Sentinel de
 
 ## Books
 
-Unpublished self-authored manuscripts and articles ([details & previews](https://github.com/86sunbot/portfolio/blob/main/books-and-learning.md)):
-- ***Microsoft Security Architect Blueprint (v1.1)*** & ***SC-500 Guide (v1.1)*** ([Cover](https://github.com/86sunbot/portfolio/blob/main/media/sc500-study-guide-v1.1-cover.png) · [TOC](https://github.com/86sunbot/portfolio/blob/main/media/sc500-study-guide-v1.1-toc.png))
-- ***Surya Master CISSP Guide*** ([Mindmap](https://github.com/86sunbot/portfolio/blob/main/media/cissp-eight-domain-mindmap-overview.png)) · ***AI-901 Guides*** · [***How NOT to Design Microsoft Sentinel***](https://www.linkedin.com/feed/update/urn:li:activity:7434462569752571904/)
+Unpublished self-authored manuscripts and public articles ([chapter outlines & metadata](https://github.com/86sunbot/portfolio/blob/main/books-and-learning.md)):
+- ***Microsoft Security Architect Blueprint (v1.1)*** · ***SC-500 Guide (v1.1)***
+- ***Surya Master CISSP Guide*** · ***AI-901 Guides*** · [***How NOT to Design Microsoft Sentinel***](https://www.linkedin.com/feed/update/urn:li:activity:7434462569752571904/)
 
 ---
 
