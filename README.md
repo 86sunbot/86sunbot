@@ -1,50 +1,43 @@
 # Surya — Cybersecurity Architect | Microsoft Sentinel & AI Agents | Technical Author
 
-I design Azure and hybrid security architectures, engineer Microsoft Sentinel detections and log-assurance pipelines, and build AI agents governed by deterministic validation gates and human review. Alongside enterprise security architecture delivery, I author CISSP and Microsoft certification study guides and maintain a separate algorithmic trading research practice.
+I design Azure and hybrid security architectures, engineer Microsoft Sentinel detections and log-assurance pipelines, and build AI agents governed by deterministic validation gates and human review. Alongside enterprise security delivery, I author CISSP and Microsoft security architecture study guides and maintain a separate algorithmic trading research practice.
+
+**Start Here:** [**Engineering Portfolio & Technical Catalogue (`86sunbot/portfolio`) →**](https://github.com/86sunbot/portfolio)
 
 ---
 
-## Featured Examples
+## Three Public Flagship Examples (Inspect Source & Run Locally)
 
-### 1. Microsoft Sentinel Detection Engineering & Log Assurance
-- **Problem:** SIEM teams face silent log drop-offs, unassociated Data Collection Rules (DCRs), and error-prone KQL translation.
-- **Contribution:** Built the **AI-Assisted Sentinel Detection Engineering Agent (V3.4)** and **Sentinel Log Validation Agent** to ground candidate KQL against workspace schemas, reconcile assets against DCRs and heartbeats, verify pipelines with synthetic canaries, and enforce human-gated `enabled=false` deployment.
-- **Result:** Six MITRE ATT&CK v14 KQL rules (`T1621`, `T1078`, `T1550.002`, `T1098.003`, `T1530`, `T1071.004`), three-way log reconciliation, and five-stage KQL validation.
-- **Access & Evidence:** **Public case study with implementation currently private** ([Sentinel](https://github.com/86sunbot/portfolio/blob/main/sentinel.md) · [Detection Agent V3.4](https://github.com/86sunbot/portfolio/blob/main/ai-agents.md#1-ai-assisted-microsoft-sentinel-detection-engineering-agent-ai-agent-usecase-deployment-v34)); V1 prototype has **public source and demo instructions** ([`fde-lab/sentinel-usecase-deployment`](https://github.com/86sunbot/fde-lab/tree/main/sentinel-usecase-deployment)).
+### 1. Azure & Enterprise AI/DR Security Architecture
+- **Problem:** CISOs and cloud architects need concrete control-plane designs comparing enterprise AI/Detection & Response ecosystems and enforcing API authentication and rate-limiting boundaries on internal RAG services.
+- **Contribution:** Authored the **491-line Microsoft Security vs. CrowdStrike Falcon Enterprise AI/DR Architecture Comparison** (7 Mermaid diagrams, 4 attack scenarios, 20-item checklist) and engineered the **`v3-enterprise-assistant` FastAPI security boundary** (`secrets.compare_digest` `X-API-Key` auth, sliding-window rate limiter, non-root Docker isolation, and `ADR-001`..`ADR-006`).
+- **Evidence & Access:** **Public source and demo instructions** ([AI/DR Architecture Guide](https://github.com/86sunbot/fde-lab/blob/main/microsoft_vs_crowdstrike_ai_dr_guide.md) · [`v3-enterprise-assistant/app/security.py`](https://github.com/86sunbot/fde-lab/blob/main/document-assistant/versions/v3-enterprise-assistant/app/security.py), `32 passed` `pytest` tests); **public case study with implementation currently private** ([`azure-security-framework`](https://github.com/86sunbot/portfolio/blob/main/security-architecture.md)).
 
-### 2. Cell & Gene Therapy (CGT) Patient-to-Batch Orchestration
-- **Problem:** A brownfield orchestration baseline had fail-open exceptions, single-timestamp overwrites on out-of-order lab events, and unauthenticated role elevation.
-- **Contribution:** Engineered a Python orchestration engine (`src/fde_capstone/`), FastAPI service, and browser console with three-state gates (`satisfied` / `not-satisfied` / `unknown`), bitemporal history, opaque bearer-token mutation auth mapped to server-side RBAC roles/scopes, and a SHA-256 hash-chained SQLite audit log.
-- **Result:** Runnable Control Tower demo (`START_DEMO.command`) with three synthetic POCs, disruption previews, and seven read-only persona lenses.
-- **Access & Evidence:** **Public source and demo instructions** ([`FDE-Final-Capstone`](https://github.com/86sunbot/FDE-Final-Capstone)).
+### 2. Microsoft Sentinel Detection Engineering & Two-Layer KQL Validation
+- **Problem:** SIEM teams face noisy or broken KQL rules, missing entity mappings, and silent log drop-offs when deploying detections without structural and semantic validation.
+- **Contribution:** Built a **Scheduled `SigninLogs` password-spray detection rule** (`DetectionWindow = 15m`, `dcount(UserPrincipalName) >= 10`, `IP` & `Account` entity mappings) and a **two-layer KQL validator** (`structural.py`, `detection.py`) enforcing `enabled = False`, blocking destructive KQL operators, and verifying threshold agreement, alongside multi-rule ATT&CK v14 and 3-way log-reconciliation frameworks.
+- **Evidence & Access:** **Public source and demo instructions** ([`reference_proposer.py`](https://github.com/86sunbot/fde-lab/blob/main/sentinel-usecase-deployment/src/sentinel_usecase/agent/reference_proposer.py) · [`structural.py`](https://github.com/86sunbot/fde-lab/blob/main/sentinel-usecase-deployment/src/sentinel_usecase/validation/structural.py), `28 passed` `pytest` tests); **public case studies with implementations currently private** ([Sentinel Detections, Log Assurance & Greenfield IaC](https://github.com/86sunbot/portfolio/blob/main/sentinel.md)).
 
-### 3. Azure Zero Trust Architecture & Enterprise AI/DR Architecture Comparison
-- **Problem:** Cloud architects need implementation-level designs connecting Entra ID Conditional Access, Hub-Spoke segmentation, Private Link DNS, encryption hierarchies, and SIEM/XDR trade-offs.
-- **Contribution:** Prepared the **Azure Security Architecture Framework** and the **Microsoft Security vs. CrowdStrike Falcon Enterprise AI/DR Architecture Comparison**.
-- **Result:** Conditional Access matrices, Hub-Spoke/Private Link topologies, PMK/CMK/CPK patterns, HLD/ADR templates, and comparative SIEM/XDR guidance.
-- **Access & Evidence:** **Public source** ([AI/DR Architecture Comparison](https://github.com/86sunbot/fde-lab/blob/main/microsoft_vs_crowdstrike_ai_dr_guide.md)); **public case study with implementation currently private** ([Security Architecture](https://github.com/86sunbot/portfolio/blob/main/security-architecture.md)).
+### 3. AI Agents for Security Operations & Regulated Workflows
+- **Problem:** Allowing LLMs to directly execute SIEM changes or clinical/manufacturing workflow transitions introduces ungoverned drift and fail-open safety risks.
+- **Contribution:** Engineered a **governed Sentinel rule-generation workflow** (`workflow.py`, `gateway.py`) that isolates the LLM from tool execution, runs single-pass validation repair, requires human `ApprovalDecision.APPROVE`, and re-validates `enabled = False` before deployment, plus a **fail-closed CGT orchestration console** (`FDE-Final-Capstone`) and **pre-GxP clinical report triage prototype** (`caldera-monitoring-triage`).
+- **Evidence & Access:** **Public source and demo instructions** ([`fde-lab/sentinel-usecase-deployment`](https://github.com/86sunbot/fde-lab/tree/main/sentinel-usecase-deployment) [`28` tests] · [`FDE-Final-Capstone`](https://github.com/86sunbot/FDE-Final-Capstone) [`118` tests] · [`caldera-monitoring-triage`](https://github.com/86sunbot/caldera-monitoring-triage) [`9` tests on `main`]); **private V3.4 case study** ([`ai-agents.md`](https://github.com/86sunbot/portfolio/blob/main/ai-agents.md)).
 
 ---
 
-## Portfolio Categories
+## Portfolio Navigation & Supporting Practice Areas
 
-1. [**Security Architecture**](https://github.com/86sunbot/portfolio/blob/main/security-architecture.md) — Azure CAF landing zones, Conditional Access, Hub-Spoke topologies, encryption, and HLD/ADR templates.
-2. [**Microsoft Sentinel**](https://github.com/86sunbot/portfolio/blob/main/sentinel.md) — KQL detections, log assurance, PowerShell/ARM orchestrator, and Logic App SOAR playbooks.
-3. [**AI Agents & Applied Engineering**](https://github.com/86sunbot/portfolio/blob/main/ai-agents.md) — Sentinel detection agent, CGT capstone, clinical triage prototype, and LLM/RAG threat models.
-4. [**Books & Learning**](https://github.com/86sunbot/portfolio/blob/main/books-and-learning.md) — Unpublished self-authored manuscripts, mindmaps, lab runbooks, and `cissp-knowledge-base`.
-5. [**Algorithmic Trading Research**](https://github.com/86sunbot/portfolio/blob/main/trading-research.md) — Separate personal research with an October 2026 Python backtest prototype.
+1. [**Security Architecture**](https://github.com/86sunbot/portfolio/blob/main/security-architecture.md) — Public AI/DR comparison, RAG security boundary, and Azure CAF / Zero Trust designs.
+2. [**Microsoft Sentinel**](https://github.com/86sunbot/portfolio/blob/main/sentinel.md) — Public `SigninLogs` KQL rule & validator, plus log assurance, Terraform/PowerShell IaC, and Logic App SOAR case studies.
+3. [**AI Agents & Applied Engineering**](https://github.com/86sunbot/portfolio/blob/main/ai-agents.md) — Governed Sentinel agent workflow, CGT Control Tower, clinical triage prototype, and LLM/RAG threat models.
+4. [**Technical Authorship & Study Guides**](https://github.com/86sunbot/portfolio/blob/main/books-and-learning.md) — Includes a **public cross-domain sample lesson** (*CISSP → Entra ID `SC-100`/`SC-500` → Sentinel KQL*), public [LinkedIn Sentinel architecture article](https://www.linkedin.com/feed/update/urn:li:activity:7434462569752571904/), and verified chapter outlines for four unpublished local manuscripts (*MS Security Architect Blueprint v1.1*, *SC-500 Guide v1.1*, *Surya Master CISSP Guide*, *AI-901 Guides*).
 
----
-
-## Books
-
-Unpublished self-authored manuscripts and public articles ([chapter outlines & metadata](https://github.com/86sunbot/portfolio/blob/main/books-and-learning.md)):
-- ***Microsoft Security Architect Blueprint (v1.1)*** · ***SC-500 Guide (v1.1)***
-- ***Surya Master CISSP Guide*** · ***AI-901 Guides*** · [***How NOT to Design Microsoft Sentinel***](https://www.linkedin.com/feed/update/urn:li:activity:7434462569752571904/)
+### Separate Personal Research Practice
+5. [**Algorithmic Trading Research**](https://github.com/86sunbot/portfolio/blob/main/trading-research.md) — Independent quantitative research practice featuring a pure-Python CPR + Wilder RSI backtesting prototype.
 
 ---
 
 ## Credentials & Contact
 
-- **CISSP (ISC2):** [Verified Credly Badge (2026–2029)](https://www.credly.com/badges/5c478c9e-77f0-4227-9251-69ecb1d639e5)
-- **Contact:** [Career Summary](https://github.com/86sunbot/portfolio/blob/main/experience-and-impact.md) · [LinkedIn](https://www.linkedin.com/in/surya-ps-cissp-a5a097160/) · Bengaluru, India
+- **CISSP (ISC2):** [Verified Credly Badge (Valid 2026–2029)](https://www.credly.com/badges/5c478c9e-77f0-4227-9251-69ecb1d639e5)
+- **Contact:** [Experience & Impact](https://github.com/86sunbot/portfolio/blob/main/experience-and-impact.md) · [LinkedIn](https://www.linkedin.com/in/surya-ps-cissp-a5a097160/) · Bengaluru, India
